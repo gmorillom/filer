@@ -1,0 +1,36 @@
+php_flag opcache.enable Off
+
+ErrorDocument 403 /filer2/Views/error403.php
+ErrorDocument 404 /filer2/Views/error404.php
+
+#RewriteEngine On
+#RewriteRule ^([a-zA-Z0-9/]+)$ /filer2/app.php
+#SI QUIERO PASAR UNA VARIABLE POR GET ENTONCES AÑADO ?var=$1
+
+
+
+#CREANDO AUTENTICACION PARA ACCEDER AL PROYECTO
+#AuthName "Verificación Requerida"
+#AuthUserFile C:\wamp\www\filer2\.htpasswd
+#AuthType Basic
+#require user nemus
+
+### COMPRESION DE ARCHIVOS ANTES DE SU SALIDA
+<IfModule mod_deflate.c>
+AddOutputFilterByType DEFLATE text/plain text/html text/javascript text/css text/xml text/ application/x-javascript
+</IfModule>
+
+#GUARDARAN LOS RECURSOS EN LA CACHE DEL VISITANTE, ACELERARA EL TIEMPO DE CARGA
+#ExpiresActive On
+#ExpiresByType image/gif A432000
+#ExpiresByType image/jpg A432000
+#ExpiresByType image/jpeg A432000
+#ExpiresByType image/png A432000
+#ExpiresByType image/ico A432000
+#ExpiresByType image/bmp A432000
+#ExpiresByType text/css A432000
+#ExpiresByType text/html A432000
+#ExpiresByType text/javascript A432000
+#ExpiresByType application/javascript A432000
+#ExpiresByType application/x-javascript A432000
+

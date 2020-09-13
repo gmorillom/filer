@@ -1,0 +1,5 @@
+Usuario		Clave						Level
+Shinigami 	Solo123.					Root
+Nemusco		dd6134e6675ae2bbe78b4cb2	Client
+Nordico		ab847a12597914aa09e0d8f4	Admin
+Eunuco		eunuco2468					Client
